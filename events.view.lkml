@@ -1,7 +1,7 @@
 view: events {
   sql_table_name: demo_db.events ;;
 
-  dimension: id {
+  dimension: id_blah {
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
@@ -39,6 +39,6 @@ view: events {
 
   measure: count {
     type: count
-    drill_fields: [id, users.first_name, users.last_name, users.id]
+    drill_fields: [id_blah, users.first_name, users.last_name, users.id]
   }
 }
